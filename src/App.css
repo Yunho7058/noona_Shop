@@ -1,7 +1,14 @@
 .login-btn {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin: 20px;
+  cursor: pointer;
+}
+
+.login-btn-icon {
+  margin-right: 5px;
+  height: 13px;
 }
 
 .nav-section {
@@ -79,6 +86,13 @@
   background-color: rgba(0, 0, 0, 0.3);
   border: 0px;
 }
-
+.product-container {
+  margin-top: 10px;
+}
 @media screen and (max-width: 600px) {
+  .product-img {
+    display: flex;
+    justify-content: flex-end;
+    height: 250px;
+  }
 }

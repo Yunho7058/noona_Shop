@@ -29,7 +29,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
   return (
     <div>
       <div className="login-btn">
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser} className="login-btn-icon" />
         <div
           className="login"
           onClick={() => {

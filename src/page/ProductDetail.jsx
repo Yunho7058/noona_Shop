@@ -18,39 +18,37 @@ const ProductDetail = () => {
   }, []);
 
   return (
-    <>
-      <Container>
-        <Row>
-          <Col className="product-img">
-            <img src={producte?.img} />
-          </Col>
+    <Container className="product-container">
+      <Row>
+        <Col className="product-img">
+          <img src={producte?.img} />
+        </Col>
+        <Col>
+          <div>{producte?.title}</div>
+          <div>{producte?.price}</div>
+          <div>{producte?.choice ? 'Conscious choice' : ''}</div>
+          <div>{producte?.new ? 'NEW' : ''}</div>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              사이즈
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              {producte?.size?.map((el, idx) => {
+                return (
+                  <Dropdown.Item href={`#/action-${idx + 1}`} key={idx}>
+                    {el}
+                  </Dropdown.Item>
+                );
+              })}
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <Col>
-            <div>{producte?.title}</div>
-            <div>{producte?.price}</div>
-            <div>{producte?.choice ? 'Conscious choice' : ''}</div>
-            <div>{producte?.new ? 'NEW' : ''}</div>
-            <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
-                사이즈
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                {producte?.size?.map((el, idx) => {
-                  return (
-                    <Dropdown.Item href={`#/action-${idx + 1}`} key={idx}>
-                      {el}
-                    </Dropdown.Item>
-                  );
-                })}
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Col>
-              <Button variant="primary">구입하기</Button>
-            </Col>
+            <Button variant="primary">구입하기</Button>
           </Col>
-        </Row>
-      </Container>
-    </>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
