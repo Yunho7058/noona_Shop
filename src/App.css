@@ -89,6 +89,17 @@
 .product-container {
   margin-top: 10px;
 }
+.product-row {
+  padding: 10px;
+}
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
+  row-gap: 10px;
+  font-size: 15px;
+  font-weight: 1000;
+}
 
 .sidebar-container {
   width: 150px;

@@ -23,11 +23,11 @@ const ProductDetail = () => {
         <Col className="product-img">
           <img src={producte?.img} />
         </Col>
-        <Col>
+        <Col className="product-detail">
           <div>{producte?.title}</div>
-          <div>{producte?.price}</div>
+          <div>{producte?.price}원</div>
           <div>{producte?.choice ? 'Conscious choice' : ''}</div>
-          <div>{producte?.new ? 'NEW' : ''}</div>
+          <div>{producte?.new ? '신상품' : ''}</div>
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               사이즈
