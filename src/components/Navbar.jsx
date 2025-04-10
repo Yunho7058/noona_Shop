@@ -50,24 +50,15 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         />
       </div>
       <div className="menu-area">
-        <Sidebar menuList={menuList} />
-        {/* {!isMobile ? (
+        {!isMobile ? (
           <ul className="menu-list">
             {menuList.map((menu, idx) => (
               <li key={idx}>{menu}</li>
             ))}
           </ul>
         ) : (
-          <>
-            <DropdownButton id="dropdown-basic-button" title="">
-              {menuList.map((menu, idx) => (
-                <Dropdown.Item key={idx}>{menu}</Dropdown.Item>
-              ))}
-            </DropdownButton>
-            <Sidebar menuList={menuList} />
-          </>
-        )} */}
-
+          <Sidebar menuList={menuList} />
+        )}
         <div className="menu-serch">
           <FontAwesomeIcon icon={faSearch} className="menu-serch-icon" />
           <input type="text" onKeyDown={search} />

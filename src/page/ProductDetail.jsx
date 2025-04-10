@@ -42,9 +42,7 @@ const ProductDetail = () => {
               })}
             </Dropdown.Menu>
           </Dropdown>
-          <Col>
-            <Button variant="primary">구입하기</Button>
-          </Col>
+          <Button variant="primary">구입하기</Button>
         </Col>
       </Row>
     </Container>
