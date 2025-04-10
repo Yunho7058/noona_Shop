@@ -17,6 +17,13 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     'Sale',
     '지속가능성',
   ];
+  const search = (event) => {
+    if (event.key === 'Enter') {
+      let keyword = event.target.value;
+
+      navigate(`/?q=${keyword}`);
+    }
+  };
   return (
     <div>
       <div className="login-btn">
@@ -47,7 +54,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         </ul>
         <div className="menu-serch">
           <FontAwesomeIcon icon={faSearch} className="menu-serch-icon" />
-          <input type="text" />
+          <input type="text" onKeyDown={search} />
         </div>
       </div>
     </div>
