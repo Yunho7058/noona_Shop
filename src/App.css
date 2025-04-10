@@ -96,3 +96,10 @@
     height: 220px;
   }
 }
+@media screen and (max-width: 275px) {
+  .product-img {
+    display: flex;
+    justify-content: flex-end;
+    height: 180px;
+  }
+}
