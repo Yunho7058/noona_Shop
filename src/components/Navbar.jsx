@@ -5,6 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
+import Sidebar from './Sidebar';
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
   const navigate = useNavigate();
@@ -49,7 +50,8 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         />
       </div>
       <div className="menu-area">
-        {!isMobile ? (
+        <Sidebar menuList={menuList} />
+        {/* {!isMobile ? (
           <ul className="menu-list">
             {menuList.map((menu, idx) => (
               <li key={idx}>{menu}</li>
@@ -62,8 +64,9 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
                 <Dropdown.Item key={idx}>{menu}</Dropdown.Item>
               ))}
             </DropdownButton>
+            <Sidebar menuList={menuList} />
           </>
-        )}
+        )} */}
 
         <div className="menu-serch">
           <FontAwesomeIcon icon={faSearch} className="menu-serch-icon" />
