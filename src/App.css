@@ -31,8 +31,6 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  position: absolute;
-  right: 10px;
 }
 
 .menu-serch input {
@@ -74,4 +72,13 @@
 .product-img {
   display: flex;
   justify-content: flex-end;
+}
+#dropdown-basic-button {
+  height: 35px;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 0px;
+}
+
+@media screen and (max-width: 600px) {
 }

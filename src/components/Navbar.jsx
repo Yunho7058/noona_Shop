@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
   const navigate = useNavigate();
@@ -47,11 +49,22 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         />
       </div>
       <div className="menu-area">
-        <ul className="menu-list">
-          {menuList.map((menu, idx) => (
-            <li key={idx}>{menu}</li>
-          ))}
-        </ul>
+        {!isMobile ? (
+          <ul className="menu-list">
+            {menuList.map((menu, idx) => (
+              <li key={idx}>{menu}</li>
+            ))}
+          </ul>
+        ) : (
+          <>
+            <DropdownButton id="dropdown-basic-button" title="List">
+              {menuList.map((menu, idx) => (
+                <Dropdown.Item key={idx}>{menu}</Dropdown.Item>
+              ))}
+            </DropdownButton>
+          </>
+        )}
+
         <div className="menu-serch">
           <FontAwesomeIcon icon={faSearch} className="menu-serch-icon" />
           <input type="text" onKeyDown={search} />
