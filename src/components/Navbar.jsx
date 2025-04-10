@@ -57,7 +57,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           </ul>
         ) : (
           <>
-            <DropdownButton id="dropdown-basic-button" title="List">
+            <DropdownButton id="dropdown-basic-button" title="">
               {menuList.map((menu, idx) => (
                 <Dropdown.Item key={idx}>{menu}</Dropdown.Item>
               ))}

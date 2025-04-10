@@ -93,6 +93,6 @@
   .product-img {
     display: flex;
     justify-content: flex-end;
-    height: 250px;
+    height: 220px;
   }
 }

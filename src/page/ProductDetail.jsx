@@ -19,7 +19,7 @@ const ProductDetail = () => {
 
   return (
     <Container className="product-container">
-      <Row>
+      <Row className="product-row">
         <Col className="product-img">
           <img src={producte?.img} />
         </Col>
@@ -40,7 +40,6 @@ const ProductDetail = () => {
                   </Dropdown.Item>
                 );
               })}
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Col>
